@@ -7,8 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("chart.js")
 require("chartkick")
+require("chart.js")
 require("chartkick").use(require("highcharts"))
 
 
@@ -29,6 +29,8 @@ require("chartkick").use(require("highcharts"))
 import "bootstrap";
 import flatpickr from "flatpickr";
 import "@fullcalendar/common/main.min.css"
+import "chartkick"
+import "chart.js"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';

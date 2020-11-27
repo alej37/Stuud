@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ankane/chartkick.git
+  revision: ac1571cd7187a3f71b7afd50d983d558d2d84747
+  branch: edge
+  specs:
+    chartkick (3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -74,7 +81,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
-    chartkick (3.4.2)
     childprocess (3.0.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.7)
@@ -242,7 +248,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  chartkick
+  chartkick!
   devise
   dotenv-rails
   font-awesome-sass
