@@ -12,6 +12,17 @@ export default class extends Controller {
     let _this = this
     let calendar = new Calendar(this.calendarTarget, {
       events: '/events.json',
+      // event: [
+      //   { // this object will be "parsed" into an Event Object
+      //   start: '', // a property!
+      //   end: '' // a property! ** see important note below about 'end' **
+      //   title: '', // a property!
+      //   extendedProps:
+      // }
+      // ],
+        // eventRender: function(info) {
+        //   console.log(info.event.extendedProps.event.price);
+        // },
       droppable: true,
       navLinks: true,
       initialView: 'timeGridWeek',
@@ -46,6 +57,9 @@ export default class extends Controller {
           url: info.event.url,
           data: new URLSearchParams(data).toString()
         })
+      },
+      eventRender: function(info) {
+        console.log(info.event.extendedProps.price);
       },
     })
     calendar.render()
