@@ -34,6 +34,11 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'devise'
 
+gem 'stripe'
+gem 'stripe_event'
+gem 'omniauth'
+gem 'omniauth-stripe-connect'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
