@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: Stuud
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: my_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - my_db_data:/var/lib/postgresql/data
+  web:
+    build: .
+    volumes:
+      - .:/stuud
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+volumes:
+  my_db_data:
